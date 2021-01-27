@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/tab.css">
+</head>
+
+<body>
+    <pre>
+    一、功能模块
+      1. 切换选项卡
+      2. 添加选项卡
+      3. 删除选项卡
+      4. 编辑选项卡
+  </pre>
+    <pre style="display: none;">
+    二、补充知识点：
+      1. 双击事件：dblclick
+      2. 解析 html 字符串并追加到父元素：element.insertAdjacentHTML('beforeend', str) 
+      3. 取消选中文字 window.getSelection ? window.getSelection().removeAllRanges() : document.selection.empty;
+  </pre>
+    <main>
+        <h4 style="user-select: none;">JS 面向对象，动态添加标签页</h4>
+
+        <div class="tabsbox" id="tab">
+            <!-- tab标签 -->
+            <nav class="firstnav">
+                <!-- tab栏标题 -->
+                <ul>
+                    <li class="liactive"><span>测试1</span><span class="close">×</span></li>
+                    <li><span>测试2</span><span class="close">×</span></li>
+                    <li><span>测试3</span><span class="close">×</span></li>
+                </ul>
+                <!-- 添加按钮 -->
+                <div class="tabadd">
+                    <span>+</span>
+                </div>
+            </nav>
+
+            <!-- tab 内容 -->
+            <div class="tabscon">
+                <section class="conactive">内容1</section>
+                <section>内容2</section>
+                <section>内容3</section>
+            </div>
+        </div>
+    </main>
+
+    <script src="./js/tab.js"></script>
+</body>
+
+</html>
